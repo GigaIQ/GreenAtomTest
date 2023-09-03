@@ -1,0 +1,6 @@
+SELECT surname FROM (
+  SELECT surname, experience, 
+         DENSE_RANK() OVER (ORDER BY experience DESC) AS ranking
+  FROM employees
+) ranked
+WHERE ranking = 2;
