@@ -3,14 +3,12 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void task2(int a, int b) {
+    public static int task2(int a, int b, int f) {
         a = b - a;
         b -= a;
         a += b;
 
-        System.out.println();
-        System.out.println("Выходное значение a = " + a);
-        System.out.println("Выходное значение b = " + b);
+        return a;
     }
 
     public static boolean task3_2(String inputStr) {
@@ -41,7 +39,10 @@ public class Main {
         System.out.println("Входное значение а = " + a);
         System.out.println("Входное значение b = " + b);
 
-        task2(a, b);
+        a = task2(a, b, b = a);
+        System.out.println("Выходное значение a = " + a);
+        System.out.println("Выходное значение b = " + b);
+
         System.out.println("==========");
         System.out.println();
 
